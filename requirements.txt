@@ -1,0 +1,2 @@
+futu_api==3.14.1
+PyMySQL==0.9.3
