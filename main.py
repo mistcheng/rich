@@ -51,7 +51,7 @@ def get_history_kline(code_list, start=None, end=None, ktype=ft.KLType.K_DAY):
         if ret != ft.RET_OK:
             print(data)  # print msg
             continue
-        add_kline(data.DataFrame)
+        add_kline([kline for kline in data.T.to_dict().values()])
 
     # 停止异步数据接收
     quote_ctx.stop()
